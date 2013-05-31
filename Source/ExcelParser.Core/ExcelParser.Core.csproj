@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{FF46C81C-1868-4663-BFDF-26F1081EA8C1}</ProjectGuid>
+    <ProjectGuid>{485C68EA-628C-4FE7-B750-415C5F0ADBFD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExcelParser</RootNamespace>
-    <AssemblyName>ExcelParser</AssemblyName>
+    <RootNamespace>ExcelParser.Core</RootNamespace>
+    <AssemblyName>ExcelParser.Core</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,7 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
@@ -43,31 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\ExcelParser.Model\Model\Cell.cs">
-      <Link>ExcelParser.Model\Cell.cs</Link>
-    </Compile>
-    <Compile Include="..\ExcelParser.Model\Model\CustomCollectionTypes\CellCollection.cs">
-      <Link>ExcelParser.Model\CellCollection.cs</Link>
-    </Compile>
-    <Compile Include="..\ExcelParser.Model\Model\CustomCollectionTypes\RowCollection.cs">
-      <Link>ExcelParser.Model\RowCollection.cs</Link>
-    </Compile>
-    <Compile Include="..\ExcelParser.Model\Model\CustomCollectionTypes\SheetCollection.cs">
-      <Link>ExcelParser.Model\SheetCollection.cs</Link>
-    </Compile>
-    <Compile Include="..\ExcelParser.Model\Model\Row.cs">
-      <Link>ExcelParser.Model\Row.cs</Link>
-    </Compile>
-    <Compile Include="..\ExcelParser.Model\Model\Workbook.cs">
-      <Link>ExcelParser.Model\Workbook.cs</Link>
-    </Compile>
-    <Compile Include="..\ExcelParser.Model\Model\Worksheet.cs">
-      <Link>ExcelParser.Model\Worksheet.cs</Link>
-    </Compile>
     <Compile Include="ExcelProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
