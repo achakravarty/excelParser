@@ -13,7 +13,7 @@ namespace ExcelParser.Tests
         [TestMethod]
         public void ShouldParseExact()
         {
-            using (var excelProvider = new ExcelProvider(@"D:\LinqToExcel.xlsx"))
+            using (var excelProvider = new ExcelProvider(@"D:\ExcelParser.xlsx"))
             {
                 var a = excelProvider.ParseExact<Customer>(x => x.Index == 1);
                 foreach (var customer in a)
