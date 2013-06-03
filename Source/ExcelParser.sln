@@ -12,6 +12,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelParser.Model", "ExcelParser.Model\ExcelParser.Model.csproj", "{428F181C-3EC6-4715-B829-97B561813CF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelParser.Attributes", "ExcelParser.Attributes\ExcelParser.Attributes.csproj", "{509EC6BC-0D92-4CE5-9DAE-8578BB241DD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelParser.PropertyBinders", "ExcelParser.PropertyBinders\ExcelParser.PropertyBinders.csproj", "{612109C0-0B48-472C-B8EA-079B51A4A212}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = ExcelParser.vsmdi
@@ -29,6 +35,18 @@ Global
 		{A4C6A400-4A70-4D2B-8C94-AE11CA1C8139}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4C6A400-4A70-4D2B-8C94-AE11CA1C8139}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4C6A400-4A70-4D2B-8C94-AE11CA1C8139}.Release|Any CPU.Build.0 = Release|Any CPU
+		{428F181C-3EC6-4715-B829-97B561813CF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{428F181C-3EC6-4715-B829-97B561813CF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{428F181C-3EC6-4715-B829-97B561813CF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{428F181C-3EC6-4715-B829-97B561813CF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{509EC6BC-0D92-4CE5-9DAE-8578BB241DD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{509EC6BC-0D92-4CE5-9DAE-8578BB241DD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{509EC6BC-0D92-4CE5-9DAE-8578BB241DD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{509EC6BC-0D92-4CE5-9DAE-8578BB241DD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{612109C0-0B48-472C-B8EA-079B51A4A212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{612109C0-0B48-472C-B8EA-079B51A4A212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{612109C0-0B48-472C-B8EA-079B51A4A212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{612109C0-0B48-472C-B8EA-079B51A4A212}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

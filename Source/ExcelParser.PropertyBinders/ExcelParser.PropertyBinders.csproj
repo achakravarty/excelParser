@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{485C68EA-628C-4FE7-B750-415C5F0ADBFD}</ProjectGuid>
+    <ProjectGuid>{612109C0-0B48-472C-B8EA-079B51A4A212}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExcelParser.Core</RootNamespace>
-    <AssemblyName>ExcelParser.Core</AssemblyName>
+    <RootNamespace>ExcelParser.PropertyBinders</RootNamespace>
+    <AssemblyName>ExcelParser.PropertyBinders</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,25 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExcelSheetManager.cs" />
-    <Compile Include="ExcelProvider.cs" />
-    <Compile Include="Extensions\ExcelExtensions.cs" />
+    <Compile Include="EnumTypeBinder.cs" />
+    <Compile Include="Interfaces\IPropertyBinder.cs" />
+    <Compile Include="ListTypeBinder.cs" />
+    <Compile Include="ObjectTypeBinder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PropertyBinderResolver.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ExcelParser.Attributes\ExcelParser.Attributes.csproj">
-      <Project>{509EC6BC-0D92-4CE5-9DAE-8578BB241DD6}</Project>
-      <Name>ExcelParser.Attributes</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ExcelParser.Model\ExcelParser.Model.csproj">
-      <Project>{428F181C-3EC6-4715-B829-97B561813CF8}</Project>
-      <Name>ExcelParser.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ExcelParser.PropertyBinders\ExcelParser.PropertyBinders.csproj">
-      <Project>{612109C0-0B48-472C-B8EA-079B51A4A212}</Project>
-      <Name>ExcelParser.PropertyBinders</Name>
-    </ProjectReference>
+    <Compile Include="ValueTypeBinder.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
