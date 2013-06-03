@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -52,6 +55,10 @@
     <ProjectReference Include="..\ExcelParser.Core\ExcelParser.Core.csproj">
       <Project>{485C68EA-628C-4FE7-B750-415C5F0ADBFD}</Project>
       <Name>ExcelParser.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExcelParser.Model\ExcelParser.Model.csproj">
+      <Project>{428F181C-3EC6-4715-B829-97B561813CF8}</Project>
+      <Name>ExcelParser.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

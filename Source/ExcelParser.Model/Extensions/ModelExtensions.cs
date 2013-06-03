@@ -11,7 +11,7 @@ namespace ExcelParser.Model.Extensions
             var rowsCount = usedRange.Rows.Count;
             for (var i = 2; i <= rowsCount; i++)
             {
-                yield return new Row { Index = i - 2, Cells = GetCells(usedRange, i, columnsCount) };
+                yield return new Row { Index = i - 2, Cells = new CellIndexer(GetCells(usedRange, i, columnsCount)) };
             }
         }
 

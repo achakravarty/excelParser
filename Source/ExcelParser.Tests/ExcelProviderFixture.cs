@@ -15,7 +15,7 @@ namespace ExcelParser.Tests
         {
             using (var excelProvider = new ExcelProvider(@"D:\ExcelParser.xlsx"))
             {
-                var a = excelProvider.ParseExact<Customer>();
+                var a = excelProvider.ParseExact<Customer>(x => x.Cells["Id"].Value.Equals(""));
                 foreach (var customer in a)
                 {
                     //Do Something
