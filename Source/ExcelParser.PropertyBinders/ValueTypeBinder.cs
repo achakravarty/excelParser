@@ -5,9 +5,9 @@ namespace ExcelParser.PropertyBinders
 {
     public class ValueTypeBinder : IPropertyBinder
     {
-        public void Bind(object obj, PropertyInfo propertyInfo, object value)
+        public void Bind(object target, PropertyInfo propertyInfo, object value)
         {
-            propertyInfo.SetValue(obj, value, null);
+            propertyInfo.SetValue(target, value, null);
         }
     }
 }

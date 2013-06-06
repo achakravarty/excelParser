@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelParser.Attributes", "E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelParser.PropertyBinders", "ExcelParser.PropertyBinders\ExcelParser.PropertyBinders.csproj", "{612109C0-0B48-472C-B8EA-079B51A4A212}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelParser.Extensions", "ExcelParser.Extensions\ExcelParser.Extensions.csproj", "{16A9F584-735D-4D7C-90D9-B76F69ACE038}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = ExcelParser.vsmdi
@@ -47,6 +49,10 @@ Global
 		{612109C0-0B48-472C-B8EA-079B51A4A212}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{612109C0-0B48-472C-B8EA-079B51A4A212}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{612109C0-0B48-472C-B8EA-079B51A4A212}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16A9F584-735D-4D7C-90D9-B76F69ACE038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16A9F584-735D-4D7C-90D9-B76F69ACE038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16A9F584-735D-4D7C-90D9-B76F69ACE038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16A9F584-735D-4D7C-90D9-B76F69ACE038}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

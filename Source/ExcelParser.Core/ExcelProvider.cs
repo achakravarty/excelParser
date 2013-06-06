@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using ExcelParser.Core.Extensions;
+using ExcelParser.Extensions;
 using ExcelParser.Model;
+using ExcelParser.PropertyBinders;
 using MsExcel = Microsoft.Office.Interop.Excel;
 
 namespace ExcelParser.Core
@@ -23,6 +24,7 @@ namespace ExcelParser.Core
         public MsExcel.Workbook Parse()
         {
             var workbook = _excelApp.Workbooks.Open(_fileName);
+            ExcelSheetManager.Workbook = workbook;
             return workbook;
         }
 
@@ -53,14 +55,8 @@ namespace ExcelParser.Core
             {
                 var type = typeof(T);
                 var obj = Activator.CreateInstance(type);
-                var sheetName = ExcelSheetManager.GetSheetName(type);
-                var sheet = workbook.Worksheets.Find(x => x.Name.Equals(sheetName));
-                var values = ExcelSheetManager.GetValues(type, predicate, sheet.UsedRange);
-                values.ForEach(value =>
-                {
-                    var binder = PropertyBinderResolver.Resolve(value.Item1.PropertyType);
-                    binder.Bind(obj, value.Item1, value.Item2);
-                });
+                var propertyBinder = new PropertyBinder();
+                propertyBinder.Bind(obj, predicate);
                 yield return obj as T;
             }
         }

@@ -43,16 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExcelSheetManager.cs" />
     <Compile Include="ExcelProvider.cs" />
-    <Compile Include="Extensions\ExcelExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PropertyBinderResolver.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ExcelParser.Attributes\ExcelParser.Attributes.csproj">
-      <Project>{509EC6BC-0D92-4CE5-9DAE-8578BB241DD6}</Project>
-      <Name>ExcelParser.Attributes</Name>
+    <ProjectReference Include="..\ExcelParser.Extensions\ExcelParser.Extensions.csproj">
+      <Project>{16A9F584-735D-4D7C-90D9-B76F69ACE038}</Project>
+      <Name>ExcelParser.Extensions</Name>
     </ProjectReference>
     <ProjectReference Include="..\ExcelParser.Model\ExcelParser.Model.csproj">
       <Project>{428F181C-3EC6-4715-B829-97B561813CF8}</Project>

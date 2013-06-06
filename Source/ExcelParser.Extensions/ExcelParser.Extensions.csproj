@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{612109C0-0B48-472C-B8EA-079B51A4A212}</ProjectGuid>
+    <ProjectGuid>{16A9F584-735D-4D7C-90D9-B76F69ACE038}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExcelParser.PropertyBinders</RootNamespace>
-    <AssemblyName>ExcelParser.PropertyBinders</AssemblyName>
+    <RootNamespace>ExcelParser.Extensions</RootNamespace>
+    <AssemblyName>ExcelParser.Extensions</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -43,19 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EnumTypeBinder.cs" />
-    <Compile Include="Interfaces\IPropertyBinder.cs" />
-    <Compile Include="ListTypeBinder.cs" />
-    <Compile Include="ObjectTypeBinder.cs" />
+    <Compile Include="ExcelExtensions.cs" />
+    <Compile Include="ExcelSheetManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PropertyBinder.cs" />
-    <Compile Include="PropertyBinderResolver.cs" />
-    <Compile Include="ValueTypeBinder.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ExcelParser.Extensions\ExcelParser.Extensions.csproj">
-      <Project>{16A9F584-735D-4D7C-90D9-B76F69ACE038}</Project>
-      <Name>ExcelParser.Extensions</Name>
+    <ProjectReference Include="..\ExcelParser.Attributes\ExcelParser.Attributes.csproj">
+      <Project>{509EC6BC-0D92-4CE5-9DAE-8578BB241DD6}</Project>
+      <Name>ExcelParser.Attributes</Name>
     </ProjectReference>
     <ProjectReference Include="..\ExcelParser.Model\ExcelParser.Model.csproj">
       <Project>{428F181C-3EC6-4715-B829-97B561813CF8}</Project>
