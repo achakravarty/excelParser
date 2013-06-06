@@ -6,9 +6,10 @@ namespace ExcelParser.PropertyBinders
 {
     public class EnumTypeBinder : IPropertyBinder
     {
-        public void Bind(object obj, PropertyInfo propertyInfo, object value)
+        public void Bind(object target, PropertyInfo propertyInfo, object value)
         {
-            throw new NotImplementedException();
+            var enumValue = Enum.Parse(propertyInfo.PropertyType, value.ToString());
+            propertyInfo.SetValue(target, enumValue, null);
         }
     }
 }
