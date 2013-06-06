@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cell.cs" />
-    <Compile Include="Indexers\CellIndexer.cs" />
+    <Compile Include="CellIndexer.cs" />
     <Compile Include="Indexers\CustomGetIndexer.cs" />
     <Compile Include="Indexers\CustomIndexer.cs" />
     <Compile Include="Extensions\ModelExtensions.cs" />

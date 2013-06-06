@@ -15,7 +15,7 @@ namespace ExcelParser.Model.Extensions
             }
         }
 
-        public static IEnumerable<Cell> GetCells(Range usedRange, int rowIndex, int columnsCount)
+        internal static IEnumerable<Cell> GetCells(Range usedRange, int rowIndex, int columnsCount)
         {
             for (var i = 1; i <= columnsCount; i++)
             {

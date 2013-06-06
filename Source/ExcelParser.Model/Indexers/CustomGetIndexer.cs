@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExcelParser.Model
+namespace ExcelParser.Model.Indexers
 {
     public abstract class CustomGetIndexer<TIn, TOut> : CustomIndexer<TIn, TOut>
     {

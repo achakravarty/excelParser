@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using ExcelParser.Model.Indexers;
 
 namespace ExcelParser.Model
 {
@@ -24,6 +25,11 @@ namespace ExcelParser.Model
         public IEnumerable<Cell> Where(Predicate<Cell> predicate)
         {
             return _cells.Where(x => predicate(x));
+        }
+
+        public IEnumerable<T> Select<T>(Func<Cell, T> func)
+        {
+            return _cells.Select(func);
         }
     }
 }
