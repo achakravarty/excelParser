@@ -1,7 +1,4 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using ExcelParser.Core;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -15,13 +12,11 @@ namespace ExcelParser.Tests
         [TestMethod]
         public void ShouldParseExact()
         {
-            TestContext.BeginTimer("Timer1");
             using (var excelProvider = new ExcelProvider(@"D:\ExcelParser.xlsx"))
             {
-                var a = excelProvider.ParseExact<Customer>(x => x.Cells["Id"].Value.Equals("1"));
-                foreach (var customer in a)
+                var customers = excelProvider.ParseExact<Customer>(x => x.Cells["Id"].Value.Equals("1"));
+                foreach (var customer in customers)
                 {
-                    TestContext.EndTimer("Timer1");
                     //Do Something
                 }
             }
