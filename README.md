@@ -23,7 +23,7 @@ using(var excelProvider = new ExcelProvider(fileName))
 
 Since the class implements IDisposable interface, the connection is automatically closed upon exiting the using block.
 
-Then you can invoke the ParseExact&lt;T&gt; method with the type into which the excel needs to be parsed into.
+Then you can invoke the [ParseExact&lt;T&gt;](Wiki/Core#excelprovider) method with the type into which the excel needs to be parsed into.
 
 ```csharp
 using(var excelProvider = new ExcelProvider(fileName))
@@ -40,7 +40,7 @@ using(var excelProvider = new ExcelProvider(fileName))
 }
 ```
 
-The Predicate filters on a Row type that is defined with the ExcelParser library and exposes a property Cells which can index the Cells in a row based on the ColumnHeader. So the above will return all customers whose Column with Header Id has value 1.
+The Predicate filters on a [Row](Wiki/Model#row) type that is defined with the ExcelParser library and exposes a property [Cells](Wiki/Model#cellindexer) which can index the Cells in a row based on the ColumnHeader. So the above will return all customers whose Column with Header Id has value 1.
 
 Once you have the IEnumerable, you can easily iterate over them and utilize them any which way you want.
 
