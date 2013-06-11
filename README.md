@@ -28,7 +28,7 @@ Then you can invoke the ParseExact&lt;T&gt; method with the type into which the 
 ```csharp
 using(var excelProvider = new ExcelProvider(fileName))
 {
-var customers = excelProvider.ParseExact<Customer>();
+	var customers = excelProvider.ParseExact<Customer>();
 }
 ```
 The above method will return an IEnumerable of Customer object by parsing the sheet name Customer. If you wish to add a constraint on the rows that are to be parsed, you can do so by providing a Predicate to the ParseExact&lt;T&gt; method, like
@@ -36,7 +36,7 @@ The above method will return an IEnumerable of Customer object by parsing the sh
 ```csharp
 using(var excelProvider = new ExcelProvider(fileName))
 {
-var customers = excelProvider.ParseExact<Customer>(x=>x.Cells["Id"].Value.Equals("1"));
+	var customers = excelProvider.ParseExact<Customer>(x=>x.Cells["Id"].Value.Equals("1"));
 }
 ```
 
@@ -47,11 +47,11 @@ Once you have the IEnumerable, you can easily iterate over them and utilize them
 ```csharp
 using(var excelProvider = new ExcelProvider(fileName))
 {
-var customers = excelProvider.ParseExact<Customer>(x=>x.Cells["Id"].Value.Equals("1"));
-foreach(var customer in customers)
-{
-//Do Something
-}
+	var customers = excelProvider.ParseExact<Customer>(x=>x.Cells["Id"].Value.Equals("1"));
+	foreach(var customer in customers)
+	{
+		//Do Something
+	}
 }
 ```
 
