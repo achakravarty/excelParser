@@ -40,7 +40,7 @@ using(var excelProvider = new ExcelProvider(fileName))
 }
 ```
 
-The Predicate filters on a [Row](ExcelParser/wiki/Model#row) type that is defined with the ExcelParser library and exposes a property [Cells](Wiki/Model#cellindexer) which can index the Cells in a row based on the ColumnHeader. So the above will return all customers whose Column with Header Id has value 1.
+The Predicate filters on a [Row](../../wiki/Model#row) type that is defined with the ExcelParser library and exposes a property [Cells](Wiki/Model#cellindexer) which can index the Cells in a row based on the ColumnHeader. So the above will return all customers whose Column with Header Id has value 1.
 
 Once you have the IEnumerable, you can easily iterate over them and utilize them any which way you want.
 
