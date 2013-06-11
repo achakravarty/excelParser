@@ -23,7 +23,7 @@ using(var excelProvider = new ExcelProvider(fileName))
 
 Since the class implements IDisposable interface, the connection is automatically closed upon exiting the using block.
 
-Then you can invoke the [ParseExact&lt;T&gt;](../../Core#excelprovider) method with the type into which the excel needs to be parsed into.
+Then you can invoke the [ParseExact&lt;T&gt;](../../wiki/Core#excelprovider) method with the type into which the excel needs to be parsed into.
 
 ```csharp
 using(var excelProvider = new ExcelProvider(fileName))
