@@ -1,14 +1,14 @@
 using System;
 using System.Linq;
-using Microsoft.Office.Interop.Excel;
+using MsExcel = Microsoft.Office.Interop.Excel;
 
 namespace ExcelParser.Core.Extensions
 {
     public static class ExcelExtensions
     {
-        public static Worksheet Find(this Sheets worksheets, Predicate<Worksheet> predicate)
+        public static MsExcel.Worksheet Find(this MsExcel.Sheets worksheets, Predicate<MsExcel.Worksheet> predicate)
         {
-            return worksheets.Cast<Worksheet>().FirstOrDefault(worksheet => predicate(worksheet));
+            return worksheets.Cast<MsExcel.Worksheet>().FirstOrDefault(worksheet => predicate(worksheet));
         }
     }
 }

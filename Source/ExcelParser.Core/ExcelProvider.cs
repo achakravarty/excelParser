@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using ExcelParser.Extensions;
 using ExcelParser.Model;
+using ExcelParser.Model.Extensions;
 using ExcelParser.PropertyBinders;
 using MsExcel = Microsoft.Office.Interop.Excel;
 
@@ -21,11 +22,11 @@ namespace ExcelParser.Core
 
         #region Parse Methods
 
-        public MsExcel.Workbook Parse()
+        public Workbook Parse()
         {
             var workbook = _excelApp.Workbooks.Open(_fileName);
-            ExcelSheetManager.Workbook = workbook;
-            return workbook;
+            var parsedWorkbook = new Workbook {Sheets = workbook.Sheets.ToModel()};
+            return parsedWorkbook;
         }
 
         #endregion
@@ -44,9 +45,9 @@ namespace ExcelParser.Core
 
         public IEnumerable<T> ParseExact<T>(Predicate<Row> predicate) where T : class
         {
-            var workbook = Parse();
-            var parsed = ParseExact<T>(workbook, predicate);
-            return parsed;
+            var workbook = _excelApp.Workbooks.Open(_fileName);
+            ExcelSheetManager.Workbook = workbook;
+            return ParseExact<T>(workbook, predicate);
         }
 
         public IEnumerable<T> ParseExact<T>(MsExcel.Workbook workbook, Predicate<Row> predicate) where T : class
@@ -65,7 +66,7 @@ namespace ExcelParser.Core
 
         #region TryParse Methods
 
-        public bool TryParse(out MsExcel.Workbook workbook, out Exception exception)
+        public bool TryParse(out Workbook workbook, out Exception exception)
         {
             workbook = null;
             exception = null;
@@ -88,18 +89,10 @@ namespace ExcelParser.Core
         public bool TryParseExact<T>(out IEnumerable<T> objects, out Exception exception) where T : class
         {
             objects = null;
+            exception = null;
             try
             {
-                MsExcel.Workbook workbook;
-                var isWorkbookParsed = TryParse(out workbook, out exception);
-                if (isWorkbookParsed)
-                {
-                    objects = ParseExact<T>(x => true);
-                }
-                else
-                {
-                    return false;
-                }
+                objects = ParseExact<T>(x => true);
             }
             catch (Exception ex)
             {
@@ -115,7 +108,7 @@ namespace ExcelParser.Core
             exception = null;
             try
             {
-                objects = ParseExact<T>(x => true);
+                objects = ParseExact<T>(workbook, x => true);
             }
             catch (Exception ex)
             {
@@ -128,18 +121,10 @@ namespace ExcelParser.Core
         public bool TryParseExact<T>(Predicate<Row> predicate, out IEnumerable<T> objects, out Exception exception) where T : class
         {
             objects = null;
+            exception = null;
             try
             {
-                MsExcel.Workbook workbook;
-                var isWorkbookParsed = TryParse(out workbook, out exception);
-                if (isWorkbookParsed)
-                {
-                    objects = ParseExact<T>(predicate);
-                }
-                else
-                {
-                    return false;
-                }
+                objects = ParseExact<T>(x => true);
             }
             catch (Exception ex)
             {
