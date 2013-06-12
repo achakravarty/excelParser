@@ -72,10 +72,10 @@ public class Customer
 You can also use attributes provided to map an alias to the sheet or column that you want to parse
 
 ```csharp
-[SheetAttribute(Name = "CustomerSheet")]
+[Sheet(Name = "CustomerSheet")]
 public class Customer
 {
-	[ColumnAttribute(Name = "CustomerName")]
+	[Column(Name = "CustomerName")]
 	public string Name {get;set;}
 	public Address Address {get;set;}
 	public List<Order> Orders {get;set;}
