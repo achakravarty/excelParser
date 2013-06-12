@@ -26,10 +26,5 @@ namespace ExcelParser.Model
         {
             return _cells.Where(x => predicate(x));
         }
-
-        public IEnumerable<T> Select<T>(Func<Cell, T> func)
-        {
-            return _cells.Select(func);
-        }
     }
 }

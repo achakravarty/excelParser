@@ -17,7 +17,7 @@ namespace ExcelParser.Extensions
         {
             var values = new List<Tuple<PropertyInfo, object>>();
             var properties = type.GetProperties();
-            var row = rows.ToRows().FirstOrDefault(r => predicate(r));
+            var row = rows.ToModel().FirstOrDefault(r => predicate(r));
             if (row != null)
             {
                 properties.ToList().ForEach(property =>
@@ -42,7 +42,7 @@ namespace ExcelParser.Extensions
             var rows = sheet.UsedRange;
             var values = new List<Tuple<PropertyInfo, object>>();
             var properties = type.GetProperties();
-            var row = rows.ToRows().FirstOrDefault(r => predicate(r));
+            var row = rows.ToModel().FirstOrDefault(r => predicate(r));
             if (row != null)
             {
                 properties.ToList().ForEach(property =>
