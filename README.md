@@ -82,7 +82,7 @@ public class Customer
 }
 ```
 
-If you do not want to parse the Workbook into any object of you own and just want a model which enables you to query the worksheets, rows and cells, then you just can invoke the [Parse](../../wiki/Core#excelprovider)
+If you do not want to parse the Workbook into any object of you own and just want a model which enables you to query the worksheets, rows and cells, then you just can invoke the [Parse](../../wiki/Core#excelprovider) method.
 
 ```csharp
 using(var excelProvider = new ExcelProvider(fileName))
