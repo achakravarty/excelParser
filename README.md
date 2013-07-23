@@ -1,6 +1,8 @@
 ExcelParser
 ===========
 
+The documentation is not updated as of today. It is in progress.
+
 ExcelParser is a library that parses an excel file using [Microsoft Interop Services](http://msdn.microsoft.com/en-us/library/microsoft.office.interop.excel.aspx) into a strongly typed object of type specified by the consumer when the parse method is called. The parser deconstructs the type into its constituent properties and then parses the excel file accordingly to populate the object.
 
 ## Features ##
